@@ -5,7 +5,13 @@ public class ArrayMethods1 {
 	{
 		for(int x = 0;  x < list1.length - 1; x++)
 		{
-			
+			int low = 0;
+			int a = list1[x];
+			int b = list1[x+1];
+			if(a < b)
+			{
+				swapInt(list1[x], a, b);
+			}
 		}
 	}
 	
@@ -13,7 +19,12 @@ public class ArrayMethods1 {
 	{
 		for(int x = 0;  x < list1.length - 1; x++)
 		{
-			
+			double a = list1[x];
+			double b = list1[x+1];
+			if(a < b)
+			{
+				swapDouble(list1[x], a, b);
+			}
 		}
 	}
 	
