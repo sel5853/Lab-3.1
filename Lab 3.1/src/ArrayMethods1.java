@@ -31,13 +31,18 @@ public class ArrayMethods1 {
 	
 	public static void bubbleSort(String[] list1)
 	{
-		for(int x = 0;  x < list1.length - 1; x++)
+		while(swap != 0)
 		{
-			String a = list1[x];
-			String b = list1[x+1];
-			if(a.compareTo(b) > 0)
+			for(int x = 0;  x < list1.length - 1; x++)
 			{
-				swapString(list1[x], a, b);
+				int swap = 0;
+				String a = list1[x];
+				String b = list1[x+1];
+				if(a.compareTo(b) > 0)
+				{
+					swapString(list1[x], a, b);
+					swap++;
+				}
 			}
 		}
 	}
