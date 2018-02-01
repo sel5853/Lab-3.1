@@ -49,25 +49,10 @@ public class ArrayMethods1 {
 				if(a.compareTo(b) > 0)
 				{
 					swapString(list1[x], a, b);
+					swap++;
 				}
 			}
-			swap++;
 		}
-	}
-	
-	private static void swapString(String x, String a, String b)
-	{
-		
-	}
-	
-	private static void swapInt(int x, int a, int b)
-	{
-		
-	}
-	
-	private static void swapDouble(double x, double a, double b)
-	{
-		
 	}
 	
 	public static void main(String[] args)
