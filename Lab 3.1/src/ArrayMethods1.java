@@ -1,12 +1,17 @@
 import java.util.Arrays;
 
+/*
+ * Author: Stanley Liang
+ * Date: 2/1/18
+ * Lab 3.1 Sorting Algorithms
+ */
+
 public class ArrayMethods1 {
 
 	public static void insertionSort(int[] list1)
 	{
 		for(int x = 0;  x < list1.length - 1; x++)
 		{
-			int low = 0;
 			int a = list1[x];
 			int b = list1[x+1];
 			if(a < b)
@@ -20,10 +25,12 @@ public class ArrayMethods1 {
 	{
 		for(int x = 0;  x < list1.length - 1; x++)
 		{
+			double low = 0;
 			double a = list1[x];
 			double b = list1[x+1];
 			if(a < b)
 			{
+				low = a;
 				swapDouble(list1[x], a, b);
 			}
 		}
@@ -31,19 +38,20 @@ public class ArrayMethods1 {
 	
 	public static void bubbleSort(String[] list1)
 	{
-		while(swap != 0)
+		int swap = 1;
+		while(swap > 0)
 		{
+			swap = 0;
 			for(int x = 0;  x < list1.length - 1; x++)
 			{
-				int swap = 0;
 				String a = list1[x];
 				String b = list1[x+1];
 				if(a.compareTo(b) > 0)
 				{
 					swapString(list1[x], a, b);
-					swap++;
 				}
 			}
+			swap++;
 		}
 	}
 	
