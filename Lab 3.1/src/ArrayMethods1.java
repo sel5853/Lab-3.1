@@ -16,40 +16,44 @@ public class ArrayMethods1 {
 			int b = list1[x+1];
 			if(a < b)
 			{
-				swapInt(list1[x], a, b);
+				swapInt(list1, x, x+1);
 			}
 		}
 	}
 	
+	//Used video for help in understanding selection sort: https://www.youtube.com/watch?v=cqh8nQwuKNE
 	public static void selectionSort(double[] list1)
 	{
-		for(int x = 0;  x < list1.length - 1; x++)
+		for(int x = 0;  x < list1.length; x++)
 		{
-			double low = 0;
-			double a = list1[x];
-			double b = list1[x+1];
-			if(a < b)
+			int low = x;
+			for(int y = x; y < list1.length - 1; y++)
 			{
-				low = a;
-				swapDouble(list1[x], a, b);
+				double a = list1[x];
+				double b = list1[x+1];
+				if(a < b)
+				{
+					low = x;
+				}
 			}
+			swapDouble(list1, low, x);
 		}
 	}
 	
 	public static void bubbleSort(String[] list1)
 	{
-		int swap = 1;
+		int swap = 1;										//Swap is set to 1 to get the loop started
 		while(swap > 0)
 		{
-			swap = 0;
-			for(int x = 0;  x < list1.length - 1; x++)
+			swap = 0;										//Swap is set to 0 to make sure loop stops when it should
+			for(int x = 0;  x < list1.length - 1; x++)		//Goes through the array
 			{
 				String a = list1[x];
 				String b = list1[x+1];
-				if(a.compareTo(b) > 0)
+				if(a.compareTo(b) > 0)						//Compares two strings to see which one comes first alphabetically
 				{
-					swapString(list1[x], a, b);
-					swap++;
+					swapString(list1, x, x+1);				//Performs the swap
+					swap++;									//Number of swaps will increase 
 				}
 			}
 		}
